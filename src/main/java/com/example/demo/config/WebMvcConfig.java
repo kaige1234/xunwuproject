@@ -49,6 +49,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter implements Application
 	public SpringResourceTemplateResolver templateResolver() {
 		SpringResourceTemplateResolver templateResolver=new SpringResourceTemplateResolver();
 		templateResolver.setApplicationContext(this.applicationContext);
+		//页面出现乱码
 		templateResolver.setCharacterEncoding("UTF-8");
 		templateResolver.setCacheable(thymeleafCacheEnable);
 		return templateResolver;

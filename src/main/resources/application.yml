@@ -1,14 +1,17 @@
-#ÅäÖÃ·şÎñ¶Ë¿ÚºÅ
+#é…ç½®æœåŠ¡ç«¯å£å·
 server:
   port: 8088
+  error:
+    whitelabel:
+      enabled: false
 
-#ÅäÖÃÊä³öµÄÈÕÖ¾µØÖ·
+#é…ç½®è¾“å‡ºçš„æ—¥å¿—åœ°å€
 logging:
     file: D:/BigDataProgram/SpringBootTest/xunwulog/xunwulog.log
     level:
       root: debug
 
-#ÅäÖÃÊı¾İ¿âÁ¬½Ó
+#é…ç½®æ•°æ®åº“è¿æ¥
 spring:
   datasource:
     url: jdbc:mysql://192.168.8.123:3306/xunwu
@@ -21,12 +24,15 @@ spring:
     mode: HTML
     suffix: .html
     cache: false
-#ÅäÖÃmybatis
+  devtools:
+    restart:
+      exclude: templates/**,static/** #é…ç½®é¡µé¢çƒ­åŠ è½½
+#é…ç½®mybatis
 mybatis:
   type-aliases-package: com.sunkai.xunwuproject.bean
   mapper-locations: mappers/*.xml
 
-#ÅäÖÃmybatis·ÖÒ³
+#é…ç½®mybatisåˆ†é¡µ
 pagehelper:
   helper-dialect: mysql
   reasonable: true
