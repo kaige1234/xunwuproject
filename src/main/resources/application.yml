@@ -1,0 +1,39 @@
+#配置服务端口号
+server:
+  port: 8088
+
+#配置输出的日志地址
+logging:
+    file: D:/BigDataProgram/SpringBootTest/xunwulog/xunwulog.log
+    level:
+      root: debug
+
+#配置数据库连接
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.8.123:3306/xunwu
+    userName: root
+    password: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: HTML
+    suffix: .html
+    cache: false
+#配置mybatis
+mybatis:
+  type-aliases-package: com.sunkai.xunwuproject.bean
+  mapper-locations: mappers/*.xml
+
+#配置mybatis分页
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+
+
+
